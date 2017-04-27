@@ -384,6 +384,9 @@ data[SYSTEM_ADMIN].HouseholderPermissions.other = {read:true, update:true, delet
 
 data[USER] = {}
 
+data[USER].Communities = {}
+data[USER].Communities.own = {read:true}
+
 data[USER].CommunityRequisitions = {create:true}
 data[USER].CommunityRequisitions.own = {read:true, update:true, delete:true}
 
