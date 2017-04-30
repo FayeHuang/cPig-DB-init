@@ -30,6 +30,9 @@ data[COMMUNITY_ADMIN].Announcements.other = {read:true, update:true, delete:true
 data[COMMUNITY_ADMIN].Communities = {}
 data[COMMUNITY_ADMIN].Communities.own = {read:true, update:true, delete:true}
 
+data[COMMUNITY_ADMIN].CommunitySNs = {}
+data[COMMUNITY_ADMIN].CommunitySNs.own = {read:true}
+
 data[COMMUNITY_ADMIN].CommunityPermissions = {}
 data[COMMUNITY_ADMIN].CommunityPermissions[COMMUNITY_ADMIN] = {}
 data[COMMUNITY_ADMIN].CommunityPermissions[COMMUNITY_ADMIN].own = {read:true}
@@ -265,6 +268,10 @@ data[SYSTEM_ADMIN].Announcements.other = {read:true, update:true, delete:true}
 data[SYSTEM_ADMIN].Communities = {create:true}
 data[SYSTEM_ADMIN].Communities.own = {read:true, update:true, delete:true}
 data[SYSTEM_ADMIN].Communities.other = {read:true, update:true, delete:true}
+
+data[SYSTEM_ADMIN].CommunitySNs = {create:true}
+data[SYSTEM_ADMIN].CommunitySNs.own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].CommunitySNs.other = {read:true, update:true, delete:true}
 
 data[SYSTEM_ADMIN].CommunityPermissions = {}
 data[SYSTEM_ADMIN].CommunityPermissions[COMMUNITY_ADMIN] = {create:true}

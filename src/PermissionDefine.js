@@ -173,6 +173,13 @@ data.SystemAdmins.read = {default:false, isReadOnly:false, displayName:"讀系�
 data.SystemAdmins.update = {default:false, isReadOnly:false, displayName:"更新系統管理員資料"}
 data.SystemAdmins.delete = {default:false, isReadOnly:false, displayName:"刪除系統管理員"}
 data.SystemAdmins.create = {default:false, isReadOnly:false, displayName:"新增系統管理員"}
+
+data.CommunitySNs = {}
+data.CommunitySNs.read = {default:false, isReadOnly:false, displayName:"讀社區序號"}
+data.CommunitySNs.update = {default:false, isReadOnly:false, displayName:"更新社區序號"}
+data.CommunitySNs.delete = {default:false, isReadOnly:false, displayName:"刪除社區序號"}
+data.CommunitySNs.create = {default:false, isReadOnly:false, displayName:"新增社區序號"}
+
 //console.log(data);
 
 create(data);
