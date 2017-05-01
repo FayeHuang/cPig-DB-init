@@ -400,16 +400,14 @@ data[USER].CommunityRequisitions.own = {read:true, update:true, delete:true}
 data[USER].HouseholderRequisitions = {create:true}
 data[USER].HouseholderRequisitions.own = {read:true, delete:true}
 
-
 data[USER].InviteMembers = {}
 data[USER].InviteMembers[COMMUNITY_ADMIN] = {accept:true}
-data[USER].InviteMembers[COMMUNITY_ADMIN].own = {read:true}
 data[USER].InviteMembers[GUARD] = {accept:true}
-data[USER].InviteMembers[GUARD].own = {read:true}
 data[USER].InviteMembers[RESIDENT] = {accept:true}
-data[USER].InviteMembers[RESIDENT].own = {read:true}
 data[USER].InviteMembers[RESIDENT_ADMIN] = {accept:true}
-data[USER].InviteMembers[RESIDENT_ADMIN].own = {read:true}
+
+data[USER].Invitations = {}
+data[USER].Invitations.own = {read:true}
 
 data[USER].MemberInviteCodes = {}
 data[USER].MemberInviteCodes[COMMUNITY_ADMIN] = {verify:true}

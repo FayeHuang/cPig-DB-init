@@ -180,6 +180,12 @@ data.CommunitySNs.update = {default:false, isReadOnly:false, displayName:"更新
 data.CommunitySNs.delete = {default:false, isReadOnly:false, displayName:"刪除社區序號"}
 data.CommunitySNs.create = {default:false, isReadOnly:false, displayName:"新增社區序號"}
 
+data.Invitations = {}
+data.Invitations.read = {default:false, isReadOnly:false, displayName:"讀邀請單"}
+data.Invitations.update = {default:false, isReadOnly:false, displayName:"更新邀請單"}
+data.Invitations.delete = {default:false, isReadOnly:false, displayName:"刪除邀請單"}
+data.Invitations.create = {default:false, isReadOnly:false, displayName:"新增邀請單"}
+
 //console.log(data);
 
 create(data);
