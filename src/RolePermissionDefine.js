@@ -273,6 +273,10 @@ data[SYSTEM_ADMIN].CommunitySNs = {create:true}
 data[SYSTEM_ADMIN].CommunitySNs.own = {read:true, update:true, delete:true}
 data[SYSTEM_ADMIN].CommunitySNs.other = {read:true, update:true, delete:true}
 
+data[SYSTEM_ADMIN].Invitations = {create:true}
+data[SYSTEM_ADMIN].Invitations.own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Invitations.other = {read:true, update:true, delete:true}
+
 data[SYSTEM_ADMIN].CommunityPermissions = {}
 data[SYSTEM_ADMIN].CommunityPermissions[COMMUNITY_ADMIN] = {create:true}
 data[SYSTEM_ADMIN].CommunityPermissions[COMMUNITY_ADMIN].own = {read:true, update:true, delete:true}
