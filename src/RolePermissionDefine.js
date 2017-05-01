@@ -411,7 +411,7 @@ data[USER].InviteMembers[RESIDENT] = {accept:true}
 data[USER].InviteMembers[RESIDENT_ADMIN] = {accept:true}
 
 data[USER].Invitations = {}
-data[USER].Invitations.own = {read:true}
+data[USER].Invitations.own = {read:true, delete:true}
 
 data[USER].MemberInviteCodes = {}
 data[USER].MemberInviteCodes[COMMUNITY_ADMIN] = {verify:true}
