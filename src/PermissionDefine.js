@@ -114,18 +114,18 @@ data.MemberInviteCodes.RESIDENT_ADMIN.verify = {default:false, isReadOnly:false,
 
 // data.CommunityMemberInviteCodes.COMMUNITY_ADMIN.scan = {default:false, isReadOnly:false, displayName:"掃描社區管理員邀請碼"}
 
-data.Householders = {}
-data.Householders.read = {default:true, isReadOnly:false, displayName:"讀社區住戶資訊"}
-data.Householders.update = {default:false, isReadOnly:false, displayName:"更新社區住戶資訊"}
-data.Householders.delete = {default:false, isReadOnly:false, displayName:"刪除社區住戶"}
-data.Householders.create = {default:false, isReadOnly:false, displayName:"新增社區住戶"}
+data.Households = {}
+data.Households.read = {default:true, isReadOnly:false, displayName:"讀社區住戶資訊"}
+data.Households.update = {default:false, isReadOnly:false, displayName:"更新社區住戶資訊"}
+data.Households.delete = {default:false, isReadOnly:false, displayName:"刪除社區住戶"}
+data.Households.create = {default:false, isReadOnly:false, displayName:"新增社區住戶"}
 
-data.HouseholderRequisitions = {}
-data.HouseholderRequisitions.read = {default:false, isReadOnly:false, displayName:"讀新住戶申請資料"}
-data.HouseholderRequisitions.update = {default:false, isReadOnly:false, displayName:"修改新住戶申請資料"}
-data.HouseholderRequisitions.delete = {default:false, isReadOnly:false, displayName:"刪除新住戶申請"}
-data.HouseholderRequisitions.create = {default:false, isReadOnly:false, displayName:"申請新住戶"}
-data.HouseholderRequisitions.verify = {default:false, isReadOnly:false, displayName:"審核新住戶申請"}
+data.HouseholdRequisitions = {}
+data.HouseholdRequisitions.read = {default:false, isReadOnly:false, displayName:"讀新住戶申請資料"}
+data.HouseholdRequisitions.update = {default:false, isReadOnly:false, displayName:"修改新住戶申請資料"}
+data.HouseholdRequisitions.delete = {default:false, isReadOnly:false, displayName:"刪除新住戶申請"}
+data.HouseholdRequisitions.create = {default:false, isReadOnly:false, displayName:"申請新住戶"}
+data.HouseholdRequisitions.verify = {default:false, isReadOnly:false, displayName:"審核新住戶申請"}
 
 data.CommunityPermissions = {}
 data.CommunityPermissions.COMMUNITY_ADMIN = {}
@@ -145,9 +145,9 @@ data.CommunityPermissions.RESIDENT_ADMIN = {}
 data.CommunityPermissions.RESIDENT_ADMIN.read = {default:false, isReadOnly:false, displayName:"讀住戶管理員權限"}
 data.CommunityPermissions.RESIDENT_ADMIN.update = {default:false, isReadOnly:false, displayName:"設定住戶管理員權限"}
 
-data.HouseholderPermissions = {}
-data.HouseholderPermissions.read = {default:false, isReadOnly:false, displayName:"讀住戶權限"}
-data.HouseholderPermissions.update = {default:false, isReadOnly:false, displayName:"設定住戶權限"}
+data.HouseholdPermissions = {}
+data.HouseholdPermissions.read = {default:false, isReadOnly:false, displayName:"讀住戶權限"}
+data.HouseholdPermissions.update = {default:false, isReadOnly:false, displayName:"設定住戶權限"}
 
 data.Packages = {}
 data.Packages.read = {default:false, isReadOnly:false, displayName:"讀信件包裹資料"}

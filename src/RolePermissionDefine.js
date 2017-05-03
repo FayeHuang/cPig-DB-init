@@ -46,13 +46,13 @@ data[COMMUNITY_ADMIN].CommunityPermissions[RESIDENT_ADMIN].own = {read:true, upd
 data[COMMUNITY_ADMIN].CommunityRequisitions = {create:true}
 data[COMMUNITY_ADMIN].CommunityRequisitions.own = {read:true, update:true, delete:true}
 
-data[COMMUNITY_ADMIN].HouseholderRequisitions = {create:true, verify:true}
-data[COMMUNITY_ADMIN].HouseholderRequisitions.own = {read:true, delete:true}
-data[COMMUNITY_ADMIN].HouseholderRequisitions.other = {read:true, delete:true}
+data[COMMUNITY_ADMIN].HouseholdRequisitions = {create:true, verify:true}
+data[COMMUNITY_ADMIN].HouseholdRequisitions.own = {read:true, delete:true}
+data[COMMUNITY_ADMIN].HouseholdRequisitions.other = {read:true, delete:true}
 
-data[COMMUNITY_ADMIN].Householders = {create:true}
-data[COMMUNITY_ADMIN].Householders.own = {read:true, delete:true}
-data[COMMUNITY_ADMIN].Householders.other = {read:true, delete:true}
+data[COMMUNITY_ADMIN].Households = {create:true}
+data[COMMUNITY_ADMIN].Households.own = {read:true, delete:true}
+data[COMMUNITY_ADMIN].Households.other = {read:true, delete:true}
 
 data[COMMUNITY_ADMIN].InviteMembers = {}
 data[COMMUNITY_ADMIN].InviteMembers[COMMUNITY_ADMIN] = {create:true, accept:true}
@@ -109,8 +109,8 @@ data[GUARD].Announcements.other = {read:true}
 data[GUARD].Communities = {}
 data[GUARD].Communities.own = {read:true}
 
-data[GUARD].Householders = {}
-data[GUARD].Householders.own = {read:true}
+data[GUARD].Households = {}
+data[GUARD].Households.own = {read:true}
 
 data[GUARD].InviteMembers = {}
 data[GUARD].InviteMembers[GUARD] = {}
@@ -152,8 +152,8 @@ data[RESIDENT].Announcements.other = {read:true}
 data[RESIDENT].Communities = {}
 data[RESIDENT].Communities.own = {read:true}
 
-data[RESIDENT].Householders = {}
-data[RESIDENT].Householders.own = {read:true}
+data[RESIDENT].Households = {}
+data[RESIDENT].Households.own = {read:true}
 
 data[RESIDENT].InviteMembers = {}
 
@@ -206,8 +206,8 @@ data[RESIDENT_ADMIN].Announcements.other = {read:true}
 data[RESIDENT_ADMIN].Communities = {}
 data[RESIDENT_ADMIN].Communities.own = {read:true}
 
-data[RESIDENT_ADMIN].Householders = {}
-data[RESIDENT_ADMIN].Householders.own = {read:true}
+data[RESIDENT_ADMIN].Households = {}
+data[RESIDENT_ADMIN].Households.own = {read:true}
 
 data[RESIDENT_ADMIN].InviteMembers = {}
 
@@ -255,8 +255,8 @@ data[RESIDENT_ADMIN].Packages = {}
 data[RESIDENT_ADMIN].Packages.own = {read:true}
 data[RESIDENT_ADMIN].Packages.other = {read:true}
 
-data[RESIDENT_ADMIN].HouseholderPermissions = {}
-data[RESIDENT_ADMIN].HouseholderPermissions.own = {read:true, update:true}
+data[RESIDENT_ADMIN].HouseholdPermissions = {}
+data[RESIDENT_ADMIN].HouseholdPermissions.own = {read:true, update:true}
 
 // ==================== role:SYSTEM_ADMIN ====================
 
@@ -295,13 +295,13 @@ data[SYSTEM_ADMIN].CommunityRequisitions = {create:true, verify:true}
 data[SYSTEM_ADMIN].CommunityRequisitions.own = {read:true, update:true, delete:true}
 data[SYSTEM_ADMIN].CommunityRequisitions.other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].HouseholderRequisitions = {create:true, verify:true}
-data[SYSTEM_ADMIN].HouseholderRequisitions.own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].HouseholderRequisitions.other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].HouseholdRequisitions = {create:true, verify:true}
+data[SYSTEM_ADMIN].HouseholdRequisitions.own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].HouseholdRequisitions.other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].Householders = {create:true}
-data[SYSTEM_ADMIN].Householders.own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].Householders.other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Households = {create:true}
+data[SYSTEM_ADMIN].Households.own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Households.other = {read:true, update:true, delete:true}
 
 data[SYSTEM_ADMIN].InviteMembers = {}
 data[SYSTEM_ADMIN].InviteMembers[COMMUNITY_ADMIN] = {}
@@ -386,10 +386,10 @@ data[SYSTEM_ADMIN].Users = {create:true}
 data[SYSTEM_ADMIN].Users.own = {read:true, update:true, delete:true}
 data[SYSTEM_ADMIN].Users.other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].HouseholderPermissions = {}
-data[SYSTEM_ADMIN].HouseholderPermissions = {create:true}
-data[SYSTEM_ADMIN].HouseholderPermissions.own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].HouseholderPermissions.other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].HouseholdPermissions = {}
+data[SYSTEM_ADMIN].HouseholdPermissions = {create:true}
+data[SYSTEM_ADMIN].HouseholdPermissions.own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].HouseholdPermissions.other = {read:true, update:true, delete:true}
 
 // ==================== role:USER ====================
 
@@ -401,8 +401,8 @@ data[USER].Communities.own = {read:true}
 data[USER].CommunityRequisitions = {create:true}
 data[USER].CommunityRequisitions.own = {read:true, update:true, delete:true}
 
-data[USER].HouseholderRequisitions = {create:true}
-data[USER].HouseholderRequisitions.own = {read:true, delete:true}
+data[USER].HouseholdRequisitions = {create:true}
+data[USER].HouseholdRequisitions.own = {read:true, delete:true}
 
 data[USER].Invitations = {}
 data[USER].Invitations.own = {read:true, delete:true, accept:true}
