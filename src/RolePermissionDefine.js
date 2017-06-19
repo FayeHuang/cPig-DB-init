@@ -138,7 +138,7 @@ data[GUARD].PackageReceiveCodes = {verify:true}
 
 data[GUARD].Packages = {create:true}
 data[GUARD].Packages.own = {read:true, delete:true}
-data[GUARD].Packages.other = {read:true}
+data[GUARD].Packages.other = {read:true, update:true, delete:true}
 
 
 
