@@ -23,400 +23,393 @@ const SYSTEM_ADMIN = "SYSTEM_ADMIN"
 // ==================== role:COMMUNITY_ADMIN ====================
 
 data[COMMUNITY_ADMIN] = {}
-data[COMMUNITY_ADMIN].Announcements = {create:true}
-data[COMMUNITY_ADMIN].Announcements.own = {read:true, update:true, delete:true}
-data[COMMUNITY_ADMIN].Announcements.other = {read:true, update:true, delete:true}
+data[COMMUNITY_ADMIN].Announcement = {create:true}
+data[COMMUNITY_ADMIN].Announcement.own = {read:true, update:true, delete:true}
+data[COMMUNITY_ADMIN].Announcement.other = {read:true, update:true, delete:true}
 
-data[COMMUNITY_ADMIN].Communities = {}
-data[COMMUNITY_ADMIN].Communities.own = {read:true, update:true, delete:true}
+data[COMMUNITY_ADMIN].Community = {}
+data[COMMUNITY_ADMIN].Community.own = {read:true, update:true, delete:true}
 
-data[COMMUNITY_ADMIN].CommunitySNs = {}
-data[COMMUNITY_ADMIN].CommunitySNs.own = {read:true}
+data[COMMUNITY_ADMIN].CommunityPermission = {}
+data[COMMUNITY_ADMIN].CommunityPermission[COMMUNITY_ADMIN] = {}
+data[COMMUNITY_ADMIN].CommunityPermission[COMMUNITY_ADMIN].own = {read:true}
+data[COMMUNITY_ADMIN].CommunityPermission[GUARD] = {}
+data[COMMUNITY_ADMIN].CommunityPermission[GUARD].own = {read:true, update:true}
+data[COMMUNITY_ADMIN].CommunityPermission[RESIDENT] = {}
+data[COMMUNITY_ADMIN].CommunityPermission[RESIDENT].own = {read:true, update:true}
+data[COMMUNITY_ADMIN].CommunityPermission[RESIDENT_ADMIN] = {}
+data[COMMUNITY_ADMIN].CommunityPermission[RESIDENT_ADMIN].own = {read:true, update:true}
 
-data[COMMUNITY_ADMIN].CommunityPermissions = {}
-data[COMMUNITY_ADMIN].CommunityPermissions[COMMUNITY_ADMIN] = {}
-data[COMMUNITY_ADMIN].CommunityPermissions[COMMUNITY_ADMIN].own = {read:true}
-data[COMMUNITY_ADMIN].CommunityPermissions[GUARD] = {}
-data[COMMUNITY_ADMIN].CommunityPermissions[GUARD].own = {read:true, update:true}
-data[COMMUNITY_ADMIN].CommunityPermissions[RESIDENT] = {}
-data[COMMUNITY_ADMIN].CommunityPermissions[RESIDENT].own = {read:true, update:true}
-data[COMMUNITY_ADMIN].CommunityPermissions[RESIDENT_ADMIN] = {}
-data[COMMUNITY_ADMIN].CommunityPermissions[RESIDENT_ADMIN].own = {read:true, update:true}
+data[COMMUNITY_ADMIN].CommunityRequisition = {create:true}
+data[COMMUNITY_ADMIN].CommunityRequisition.own = {read:true, update:true, delete:true}
 
-data[COMMUNITY_ADMIN].CommunityRequisitions = {create:true}
-data[COMMUNITY_ADMIN].CommunityRequisitions.own = {read:true, update:true, delete:true}
+data[COMMUNITY_ADMIN].HouseholdRequisition = {create:true, verify:true}
+data[COMMUNITY_ADMIN].HouseholdRequisition.own = {read:true, delete:true}
+data[COMMUNITY_ADMIN].HouseholdRequisition.other = {read:true, delete:true}
 
-data[COMMUNITY_ADMIN].HouseholdRequisitions = {create:true, verify:true}
-data[COMMUNITY_ADMIN].HouseholdRequisitions.own = {read:true, delete:true}
-data[COMMUNITY_ADMIN].HouseholdRequisitions.other = {read:true, delete:true}
+data[COMMUNITY_ADMIN].Household = {create:true}
+data[COMMUNITY_ADMIN].Household.own = {read:true, delete:true}
+data[COMMUNITY_ADMIN].Household.other = {read:true, delete:true}
 
-data[COMMUNITY_ADMIN].Households = {create:true}
-data[COMMUNITY_ADMIN].Households.own = {read:true, delete:true}
-data[COMMUNITY_ADMIN].Households.other = {read:true, delete:true}
+data[COMMUNITY_ADMIN].InviteMember = {}
+data[COMMUNITY_ADMIN].InviteMember[COMMUNITY_ADMIN] = {create:true, accept:true}
+data[COMMUNITY_ADMIN].InviteMember[COMMUNITY_ADMIN].own = {read:true, delete:true}
+data[COMMUNITY_ADMIN].InviteMember[COMMUNITY_ADMIN].other = {read:true}
 
-data[COMMUNITY_ADMIN].InviteMembers = {}
-data[COMMUNITY_ADMIN].InviteMembers[COMMUNITY_ADMIN] = {create:true, accept:true}
-data[COMMUNITY_ADMIN].InviteMembers[COMMUNITY_ADMIN].own = {read:true, delete:true}
-data[COMMUNITY_ADMIN].InviteMembers[COMMUNITY_ADMIN].other = {read:true}
+data[COMMUNITY_ADMIN].InviteMember[GUARD] = {create:true, accept:true}
+data[COMMUNITY_ADMIN].InviteMember[GUARD].own = {read:true, delete:true}
+data[COMMUNITY_ADMIN].InviteMember[GUARD].other = {read:true}
 
-data[COMMUNITY_ADMIN].InviteMembers[GUARD] = {create:true, accept:true}
-data[COMMUNITY_ADMIN].InviteMembers[GUARD].own = {read:true, delete:true}
-data[COMMUNITY_ADMIN].InviteMembers[GUARD].other = {read:true}
+data[COMMUNITY_ADMIN].InviteMember[RESIDENT] = {accept:true}
 
-data[COMMUNITY_ADMIN].InviteMembers[RESIDENT] = {accept:true}
+data[COMMUNITY_ADMIN].InviteMember[RESIDENT_ADMIN] = {accept:true}
 
-data[COMMUNITY_ADMIN].InviteMembers[RESIDENT_ADMIN] = {accept:true}
+data[COMMUNITY_ADMIN].MemberInviteCode = {}
+data[COMMUNITY_ADMIN].MemberInviteCode[COMMUNITY_ADMIN] = {create:true, verify:true}
+data[COMMUNITY_ADMIN].MemberInviteCode[COMMUNITY_ADMIN].own = {read:true, update:true, delete:true}
 
-data[COMMUNITY_ADMIN].MemberInviteCodes = {}
-data[COMMUNITY_ADMIN].MemberInviteCodes[COMMUNITY_ADMIN] = {create:true, verify:true}
-data[COMMUNITY_ADMIN].MemberInviteCodes[COMMUNITY_ADMIN].own = {read:true, update:true, delete:true}
+data[COMMUNITY_ADMIN].MemberInviteCode[GUARD] = {create:true, verify:true}
+data[COMMUNITY_ADMIN].MemberInviteCode[GUARD].own = {read:true, update:true, delete:true}
 
-data[COMMUNITY_ADMIN].MemberInviteCodes[GUARD] = {create:true, verify:true}
-data[COMMUNITY_ADMIN].MemberInviteCodes[GUARD].own = {read:true, update:true, delete:true}
+data[COMMUNITY_ADMIN].MemberInviteCode[RESIDENT] = {verify:true}
 
-data[COMMUNITY_ADMIN].MemberInviteCodes[RESIDENT] = {verify:true}
+data[COMMUNITY_ADMIN].MemberInviteCode[RESIDENT_ADMIN] = {verify:true}
 
-data[COMMUNITY_ADMIN].MemberInviteCodes[RESIDENT_ADMIN] = {verify:true}
+data[COMMUNITY_ADMIN].Member = {}
+data[COMMUNITY_ADMIN].Member[COMMUNITY_ADMIN] = {}
+data[COMMUNITY_ADMIN].Member[COMMUNITY_ADMIN].own = {read:true, delete:true}
+data[COMMUNITY_ADMIN].Member[COMMUNITY_ADMIN].other = {read:true}
 
-data[COMMUNITY_ADMIN].Members = {}
-data[COMMUNITY_ADMIN].Members[COMMUNITY_ADMIN] = {}
-data[COMMUNITY_ADMIN].Members[COMMUNITY_ADMIN].own = {read:true, delete:true}
-data[COMMUNITY_ADMIN].Members[COMMUNITY_ADMIN].other = {read:true}
+data[COMMUNITY_ADMIN].Member[GUARD] = {}
+data[COMMUNITY_ADMIN].Member[GUARD].own = {read:true}
+data[COMMUNITY_ADMIN].Member[GUARD].other = {read:true, delete:true}
 
-data[COMMUNITY_ADMIN].Members[GUARD] = {}
-data[COMMUNITY_ADMIN].Members[GUARD].own = {read:true}
-data[COMMUNITY_ADMIN].Members[GUARD].other = {read:true, delete:true}
+data[COMMUNITY_ADMIN].Member[RESIDENT] = {}
+data[COMMUNITY_ADMIN].Member[RESIDENT].own = {read:true, delete:true}
+data[COMMUNITY_ADMIN].Member[RESIDENT].other = {read:true, delete:true}
 
-data[COMMUNITY_ADMIN].Members[RESIDENT] = {}
-data[COMMUNITY_ADMIN].Members[RESIDENT].own = {read:true, delete:true}
-data[COMMUNITY_ADMIN].Members[RESIDENT].other = {read:true, delete:true}
+data[COMMUNITY_ADMIN].Member[RESIDENT_ADMIN] = {}
+data[COMMUNITY_ADMIN].Member[RESIDENT_ADMIN].own = {read:true, delete:true}
+data[COMMUNITY_ADMIN].Member[RESIDENT_ADMIN].other = {read:true, delete:true}
 
-data[COMMUNITY_ADMIN].Members[RESIDENT_ADMIN] = {}
-data[COMMUNITY_ADMIN].Members[RESIDENT_ADMIN].own = {read:true, delete:true}
-data[COMMUNITY_ADMIN].Members[RESIDENT_ADMIN].other = {read:true, delete:true}
-
-data[COMMUNITY_ADMIN].Packages = {}
-data[COMMUNITY_ADMIN].Packages.other = {read:true}
+data[COMMUNITY_ADMIN].Package = {}
+data[COMMUNITY_ADMIN].Package.other = {read:true}
 
 
 // ==================== role:GUARD ====================
 
 data[GUARD] = {}
-data[GUARD].Announcements = {}
-data[GUARD].Announcements.own = {read:true}
-data[GUARD].Announcements.other = {read:true}
+data[GUARD].Announcement = {}
+data[GUARD].Announcement.own = {read:true}
+data[GUARD].Announcement.other = {read:true}
 
-data[GUARD].Communities = {}
-data[GUARD].Communities.own = {read:true}
+data[GUARD].Community = {}
+data[GUARD].Community.own = {read:true}
 
-data[GUARD].Households = {}
-data[GUARD].Households.own = {read:true}
+data[GUARD].Household = {}
+data[GUARD].Household.own = {read:true}
 
-data[GUARD].InviteMembers = {}
-data[GUARD].InviteMembers[GUARD] = {}
-data[GUARD].InviteMembers[GUARD].own = {read:true}
-data[GUARD].InviteMembers[GUARD].other = {read:true}
+data[GUARD].InviteMember = {}
+data[GUARD].InviteMember[GUARD] = {}
+data[GUARD].InviteMember[GUARD].own = {read:true}
+data[GUARD].InviteMember[GUARD].other = {read:true}
 
-data[GUARD].Members = {}
-data[GUARD].Members[COMMUNITY_ADMIN] = {}
-data[GUARD].Members[COMMUNITY_ADMIN].own = {read:true}
-data[GUARD].Members[COMMUNITY_ADMIN].other = {read:true}
+data[GUARD].Member = {}
+data[GUARD].Member[COMMUNITY_ADMIN] = {}
+data[GUARD].Member[COMMUNITY_ADMIN].own = {read:true}
+data[GUARD].Member[COMMUNITY_ADMIN].other = {read:true}
 
-data[GUARD].Members[GUARD] = {}
-data[GUARD].Members[GUARD].own = {read:true}
-data[GUARD].Members[GUARD].other = {read:true}
+data[GUARD].Member[GUARD] = {}
+data[GUARD].Member[GUARD].own = {read:true}
+data[GUARD].Member[GUARD].other = {read:true}
 
-data[GUARD].Members[RESIDENT] = {}
-data[GUARD].Members[RESIDENT].own = {read:true}
-data[GUARD].Members[RESIDENT].other = {read:true}
+data[GUARD].Member[RESIDENT] = {}
+data[GUARD].Member[RESIDENT].own = {read:true}
+data[GUARD].Member[RESIDENT].other = {read:true}
 
-data[GUARD].Members[RESIDENT_ADMIN] = {}
-data[GUARD].Members[RESIDENT_ADMIN].own = {read:true}
-data[GUARD].Members[RESIDENT_ADMIN].other = {read:true}
+data[GUARD].Member[RESIDENT_ADMIN] = {}
+data[GUARD].Member[RESIDENT_ADMIN].own = {read:true}
+data[GUARD].Member[RESIDENT_ADMIN].other = {read:true}
 
-data[GUARD].PackageReceiveCodes = {verify:true}
+data[GUARD].PackageReceiveCode = {verify:true}
 
-data[GUARD].Packages = {create:true}
-data[GUARD].Packages.own = {read:true, delete:true}
-data[GUARD].Packages.other = {read:true, update:true, delete:true}
+data[GUARD].Package = {create:true}
+data[GUARD].Package.own = {read:true, delete:true}
+data[GUARD].Package.other = {read:true, update:true, delete:true}
 
 
 
 // ==================== role:RESIDENT ====================
 
 data[RESIDENT] = {}
-data[RESIDENT].Announcements = {}
-data[RESIDENT].Announcements.own = {read:true}
-data[RESIDENT].Announcements.other = {read:true}
+data[RESIDENT].Announcement = {}
+data[RESIDENT].Announcement.own = {read:true}
+data[RESIDENT].Announcement.other = {read:true}
 
-data[RESIDENT].Communities = {}
-data[RESIDENT].Communities.own = {read:true}
+data[RESIDENT].Community = {}
+data[RESIDENT].Community.own = {read:true}
 
-data[RESIDENT].Households = {}
-data[RESIDENT].Households.own = {read:true}
+data[RESIDENT].Household = {}
+data[RESIDENT].Household.own = {read:true}
 
-data[RESIDENT].InviteMembers = {}
+data[RESIDENT].InviteMember = {}
 
-data[RESIDENT].InviteMembers[RESIDENT] = {create:true}
-data[RESIDENT].InviteMembers[RESIDENT].own = {read:true, delete:true}
-data[RESIDENT].InviteMembers[RESIDENT].other = {read:true}
+data[RESIDENT].InviteMember[RESIDENT] = {create:true}
+data[RESIDENT].InviteMember[RESIDENT].own = {read:true, delete:true}
+data[RESIDENT].InviteMember[RESIDENT].other = {read:true}
 
-data[RESIDENT].InviteMembers[RESIDENT_ADMIN] = {}
-data[RESIDENT].InviteMembers[RESIDENT_ADMIN].own = {read:true}
-data[RESIDENT].InviteMembers[RESIDENT_ADMIN].other = {read:true}
+data[RESIDENT].InviteMember[RESIDENT_ADMIN] = {}
+data[RESIDENT].InviteMember[RESIDENT_ADMIN].own = {read:true}
+data[RESIDENT].InviteMember[RESIDENT_ADMIN].other = {read:true}
 
-data[RESIDENT].MemberInviteCodes = {}
+data[RESIDENT].MemberInviteCode = {}
 
-data[RESIDENT].MemberInviteCodes[RESIDENT] = {create:true}
-data[RESIDENT].MemberInviteCodes[RESIDENT].own = {read:true, update:true, delete:true}
+data[RESIDENT].MemberInviteCode[RESIDENT] = {create:true}
+data[RESIDENT].MemberInviteCode[RESIDENT].own = {read:true, update:true, delete:true}
 
-data[RESIDENT].Members = {}
-data[RESIDENT].Members[COMMUNITY_ADMIN] = {}
-data[RESIDENT].Members[COMMUNITY_ADMIN].own = {read:true}
-data[RESIDENT].Members[COMMUNITY_ADMIN].own = {other:true}
+data[RESIDENT].Member = {}
+data[RESIDENT].Member[COMMUNITY_ADMIN] = {}
+data[RESIDENT].Member[COMMUNITY_ADMIN].own = {read:true}
+data[RESIDENT].Member[COMMUNITY_ADMIN].own = {other:true}
 
-data[RESIDENT].Members[GUARD] = {}
-data[RESIDENT].Members[GUARD].own = {read:true}
-data[RESIDENT].Members[GUARD].own = {other:true}
+data[RESIDENT].Member[GUARD] = {}
+data[RESIDENT].Member[GUARD].own = {read:true}
+data[RESIDENT].Member[GUARD].own = {other:true}
 
-data[RESIDENT].Members[RESIDENT] = {}
-data[RESIDENT].Members[RESIDENT].own = {read:true, delete:true}
-data[RESIDENT].Members[RESIDENT].other = {read:true}
+data[RESIDENT].Member[RESIDENT] = {}
+data[RESIDENT].Member[RESIDENT].own = {read:true, delete:true}
+data[RESIDENT].Member[RESIDENT].other = {read:true}
 
-data[RESIDENT].Members[RESIDENT_ADMIN] = {}
-data[RESIDENT].Members[RESIDENT_ADMIN].own = {read:true}
-data[RESIDENT].Members[RESIDENT_ADMIN].other = {read:true}
+data[RESIDENT].Member[RESIDENT_ADMIN] = {}
+data[RESIDENT].Member[RESIDENT_ADMIN].own = {read:true}
+data[RESIDENT].Member[RESIDENT_ADMIN].other = {read:true}
 
-data[RESIDENT].PackageReceiveCodes = {}
-data[RESIDENT].PackageReceiveCodes = {create:true}
-data[RESIDENT].PackageReceiveCodes.own = {read:true, update:true, delete:true}
+data[RESIDENT].PackageReceiveCode = {}
+data[RESIDENT].PackageReceiveCode = {create:true}
+data[RESIDENT].PackageReceiveCode.own = {read:true, update:true, delete:true}
 
-data[RESIDENT].Packages = {}
-data[RESIDENT].Packages.own = {read:true}
-data[RESIDENT].Packages.other = {read:true}
+data[RESIDENT].Package = {}
+data[RESIDENT].Package.own = {read:true}
+data[RESIDENT].Package.other = {read:true}
 
 
 // ==================== role:RESIDENT_ADMIN ====================
 
 data[RESIDENT_ADMIN] = {}
-data[RESIDENT_ADMIN].Announcements = {}
-data[RESIDENT_ADMIN].Announcements.own = {read:true}
-data[RESIDENT_ADMIN].Announcements.other = {read:true}
+data[RESIDENT_ADMIN].Announcement = {}
+data[RESIDENT_ADMIN].Announcement.own = {read:true}
+data[RESIDENT_ADMIN].Announcement.other = {read:true}
 
-data[RESIDENT_ADMIN].Communities = {}
-data[RESIDENT_ADMIN].Communities.own = {read:true}
+data[RESIDENT_ADMIN].Community = {}
+data[RESIDENT_ADMIN].Community.own = {read:true}
 
-data[RESIDENT_ADMIN].Households = {}
-data[RESIDENT_ADMIN].Households.own = {read:true}
+data[RESIDENT_ADMIN].Household = {}
+data[RESIDENT_ADMIN].Household.own = {read:true}
 
-data[RESIDENT_ADMIN].InviteMembers = {}
+data[RESIDENT_ADMIN].InviteMember = {}
 
-data[RESIDENT_ADMIN].InviteMembers[RESIDENT] = {}
-data[RESIDENT_ADMIN].InviteMembers[RESIDENT] = {create:true}
-data[RESIDENT_ADMIN].InviteMembers[RESIDENT].own = {read:true, delete:true}
-data[RESIDENT_ADMIN].InviteMembers[RESIDENT].other = {read:true}
+data[RESIDENT_ADMIN].InviteMember[RESIDENT] = {}
+data[RESIDENT_ADMIN].InviteMember[RESIDENT] = {create:true}
+data[RESIDENT_ADMIN].InviteMember[RESIDENT].own = {read:true, delete:true}
+data[RESIDENT_ADMIN].InviteMember[RESIDENT].other = {read:true}
 
-data[RESIDENT_ADMIN].InviteMembers[RESIDENT_ADMIN] = {}
-data[RESIDENT_ADMIN].InviteMembers[RESIDENT_ADMIN] = {create:true}
-data[RESIDENT_ADMIN].InviteMembers[RESIDENT_ADMIN].own = {read:true, delete:true}
-data[RESIDENT_ADMIN].InviteMembers[RESIDENT_ADMIN].other = {read:true}
+data[RESIDENT_ADMIN].InviteMember[RESIDENT_ADMIN] = {}
+data[RESIDENT_ADMIN].InviteMember[RESIDENT_ADMIN] = {create:true}
+data[RESIDENT_ADMIN].InviteMember[RESIDENT_ADMIN].own = {read:true, delete:true}
+data[RESIDENT_ADMIN].InviteMember[RESIDENT_ADMIN].other = {read:true}
 
-data[RESIDENT_ADMIN].MemberInviteCodes = {}
+data[RESIDENT_ADMIN].MemberInviteCode = {}
 
-data[RESIDENT_ADMIN].MemberInviteCodes[RESIDENT] = {create:true}
-data[RESIDENT_ADMIN].MemberInviteCodes[RESIDENT].own = {read:true, update:true, delete:true}
+data[RESIDENT_ADMIN].MemberInviteCode[RESIDENT] = {create:true}
+data[RESIDENT_ADMIN].MemberInviteCode[RESIDENT].own = {read:true, update:true, delete:true}
 
-data[RESIDENT_ADMIN].MemberInviteCodes[RESIDENT_ADMIN] = {}
-data[RESIDENT_ADMIN].MemberInviteCodes[RESIDENT_ADMIN] = {create:true}
-data[RESIDENT_ADMIN].MemberInviteCodes[RESIDENT_ADMIN].own = {read:true, update:true, delete:true}
+data[RESIDENT_ADMIN].MemberInviteCode[RESIDENT_ADMIN] = {}
+data[RESIDENT_ADMIN].MemberInviteCode[RESIDENT_ADMIN] = {create:true}
+data[RESIDENT_ADMIN].MemberInviteCode[RESIDENT_ADMIN].own = {read:true, update:true, delete:true}
 
-data[RESIDENT_ADMIN].Members = {}
-data[RESIDENT_ADMIN].Members[COMMUNITY_ADMIN] = {}
-data[RESIDENT_ADMIN].Members[COMMUNITY_ADMIN].own = {read:true}
-data[RESIDENT_ADMIN].Members[COMMUNITY_ADMIN].other = {read:true}
+data[RESIDENT_ADMIN].Member = {}
+data[RESIDENT_ADMIN].Member[COMMUNITY_ADMIN] = {}
+data[RESIDENT_ADMIN].Member[COMMUNITY_ADMIN].own = {read:true}
+data[RESIDENT_ADMIN].Member[COMMUNITY_ADMIN].other = {read:true}
 
-data[RESIDENT_ADMIN].Members[GUARD] = {}
-data[RESIDENT_ADMIN].Members[GUARD].own = {read:true}
-data[RESIDENT_ADMIN].Members[GUARD].other = {read:true}
+data[RESIDENT_ADMIN].Member[GUARD] = {}
+data[RESIDENT_ADMIN].Member[GUARD].own = {read:true}
+data[RESIDENT_ADMIN].Member[GUARD].other = {read:true}
 
-data[RESIDENT_ADMIN].Members[RESIDENT] = {}
-data[RESIDENT_ADMIN].Members[RESIDENT].own = {read:true}
-data[RESIDENT_ADMIN].Members[RESIDENT].other = {read:true, delete:true}
+data[RESIDENT_ADMIN].Member[RESIDENT] = {}
+data[RESIDENT_ADMIN].Member[RESIDENT].own = {read:true}
+data[RESIDENT_ADMIN].Member[RESIDENT].other = {read:true, delete:true}
 
-data[RESIDENT_ADMIN].Members[RESIDENT_ADMIN] = {}
-data[RESIDENT_ADMIN].Members[RESIDENT_ADMIN].own = {read:true, delete:true}
-data[RESIDENT_ADMIN].Members[RESIDENT_ADMIN].other = {read:true}
+data[RESIDENT_ADMIN].Member[RESIDENT_ADMIN] = {}
+data[RESIDENT_ADMIN].Member[RESIDENT_ADMIN].own = {read:true, delete:true}
+data[RESIDENT_ADMIN].Member[RESIDENT_ADMIN].other = {read:true}
 
-data[RESIDENT_ADMIN].PackageReceiveCodes = {}
-data[RESIDENT_ADMIN].PackageReceiveCodes = {create:true}
-data[RESIDENT_ADMIN].PackageReceiveCodes.own = {read:true, update:true, delete:true}
+data[RESIDENT_ADMIN].PackageReceiveCode = {}
+data[RESIDENT_ADMIN].PackageReceiveCode = {create:true}
+data[RESIDENT_ADMIN].PackageReceiveCode.own = {read:true, update:true, delete:true}
 
-data[RESIDENT_ADMIN].Packages = {}
-data[RESIDENT_ADMIN].Packages.own = {read:true}
-data[RESIDENT_ADMIN].Packages.other = {read:true}
+data[RESIDENT_ADMIN].Package = {}
+data[RESIDENT_ADMIN].Package.own = {read:true}
+data[RESIDENT_ADMIN].Package.other = {read:true}
 
-data[RESIDENT_ADMIN].HouseholdPermissions = {}
-data[RESIDENT_ADMIN].HouseholdPermissions.own = {read:true, update:true}
+data[RESIDENT_ADMIN].HouseholdPermission = {}
+data[RESIDENT_ADMIN].HouseholdPermission.own = {read:true, update:true}
 
 // ==================== role:SYSTEM_ADMIN ====================
 
 data[SYSTEM_ADMIN] = {}
-data[SYSTEM_ADMIN].Announcements = {create:true}
-data[SYSTEM_ADMIN].Announcements.own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].Announcements.other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Announcement = {create:true}
+data[SYSTEM_ADMIN].Announcement.own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Announcement.other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].Communities = {create:true}
-data[SYSTEM_ADMIN].Communities.own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].Communities.other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Community = {create:true}
+data[SYSTEM_ADMIN].Community.own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Community.other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].CommunitySNs = {create:true}
-data[SYSTEM_ADMIN].CommunitySNs.own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].CommunitySNs.other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Invitation = {create:true}
+data[SYSTEM_ADMIN].Invitation.own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Invitation.other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].Invitations = {create:true}
-data[SYSTEM_ADMIN].Invitations.own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].Invitations.other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].CommunityPermission = {}
+data[SYSTEM_ADMIN].CommunityPermission[COMMUNITY_ADMIN] = {create:true}
+data[SYSTEM_ADMIN].CommunityPermission[COMMUNITY_ADMIN].own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].CommunityPermission[COMMUNITY_ADMIN].other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].CommunityPermission[GUARD] = {create:true}
+data[SYSTEM_ADMIN].CommunityPermission[GUARD].own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].CommunityPermission[GUARD].other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].CommunityPermission[RESIDENT] = {create:true}
+data[SYSTEM_ADMIN].CommunityPermission[RESIDENT].own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].CommunityPermission[RESIDENT].other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].CommunityPermission[RESIDENT_ADMIN] = {create:true}
+data[SYSTEM_ADMIN].CommunityPermission[RESIDENT_ADMIN].own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].CommunityPermission[RESIDENT_ADMIN].other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].CommunityPermissions = {}
-data[SYSTEM_ADMIN].CommunityPermissions[COMMUNITY_ADMIN] = {create:true}
-data[SYSTEM_ADMIN].CommunityPermissions[COMMUNITY_ADMIN].own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].CommunityPermissions[COMMUNITY_ADMIN].other = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].CommunityPermissions[GUARD] = {create:true}
-data[SYSTEM_ADMIN].CommunityPermissions[GUARD].own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].CommunityPermissions[GUARD].other = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].CommunityPermissions[RESIDENT] = {create:true}
-data[SYSTEM_ADMIN].CommunityPermissions[RESIDENT].own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].CommunityPermissions[RESIDENT].other = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].CommunityPermissions[RESIDENT_ADMIN] = {create:true}
-data[SYSTEM_ADMIN].CommunityPermissions[RESIDENT_ADMIN].own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].CommunityPermissions[RESIDENT_ADMIN].other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].CommunityRequisition = {create:true, verify:true}
+data[SYSTEM_ADMIN].CommunityRequisition.own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].CommunityRequisition.other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].CommunityRequisitions = {create:true, verify:true}
-data[SYSTEM_ADMIN].CommunityRequisitions.own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].CommunityRequisitions.other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].HouseholdRequisition = {create:true, verify:true}
+data[SYSTEM_ADMIN].HouseholdRequisition.own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].HouseholdRequisition.other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].HouseholdRequisitions = {create:true, verify:true}
-data[SYSTEM_ADMIN].HouseholdRequisitions.own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].HouseholdRequisitions.other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Household = {create:true}
+data[SYSTEM_ADMIN].Household.own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Household.other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].Households = {create:true}
-data[SYSTEM_ADMIN].Households.own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].Households.other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].InviteMember = {}
+data[SYSTEM_ADMIN].InviteMember[COMMUNITY_ADMIN] = {}
+data[SYSTEM_ADMIN].InviteMember[COMMUNITY_ADMIN] = {create:true, accept:true}
+data[SYSTEM_ADMIN].InviteMember[COMMUNITY_ADMIN].own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].InviteMember[COMMUNITY_ADMIN].other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].InviteMembers = {}
-data[SYSTEM_ADMIN].InviteMembers[COMMUNITY_ADMIN] = {}
-data[SYSTEM_ADMIN].InviteMembers[COMMUNITY_ADMIN] = {create:true, accept:true}
-data[SYSTEM_ADMIN].InviteMembers[COMMUNITY_ADMIN].own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].InviteMembers[COMMUNITY_ADMIN].other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].InviteMember[GUARD] = {}
+data[SYSTEM_ADMIN].InviteMember[GUARD] = {create:true, accept:true}
+data[SYSTEM_ADMIN].InviteMember[GUARD].own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].InviteMember[GUARD].other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].InviteMembers[GUARD] = {}
-data[SYSTEM_ADMIN].InviteMembers[GUARD] = {create:true, accept:true}
-data[SYSTEM_ADMIN].InviteMembers[GUARD].own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].InviteMembers[GUARD].other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].InviteMember[RESIDENT] = {}
+data[SYSTEM_ADMIN].InviteMember[RESIDENT] = {create:true, accept:true}
+data[SYSTEM_ADMIN].InviteMember[RESIDENT].own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].InviteMember[RESIDENT].other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].InviteMembers[RESIDENT] = {}
-data[SYSTEM_ADMIN].InviteMembers[RESIDENT] = {create:true, accept:true}
-data[SYSTEM_ADMIN].InviteMembers[RESIDENT].own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].InviteMembers[RESIDENT].other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].InviteMember[RESIDENT_ADMIN] = {}
+data[SYSTEM_ADMIN].InviteMember[RESIDENT_ADMIN] = {create:true, accept:true}
+data[SYSTEM_ADMIN].InviteMember[RESIDENT_ADMIN].own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].InviteMember[RESIDENT_ADMIN].other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].InviteMembers[RESIDENT_ADMIN] = {}
-data[SYSTEM_ADMIN].InviteMembers[RESIDENT_ADMIN] = {create:true, accept:true}
-data[SYSTEM_ADMIN].InviteMembers[RESIDENT_ADMIN].own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].InviteMembers[RESIDENT_ADMIN].other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].MemberInviteCode = {}
+data[SYSTEM_ADMIN].MemberInviteCode[COMMUNITY_ADMIN] = {}
+data[SYSTEM_ADMIN].MemberInviteCode[COMMUNITY_ADMIN] = {create:true, verify:true}
+data[SYSTEM_ADMIN].MemberInviteCode[COMMUNITY_ADMIN].own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].MemberInviteCode[COMMUNITY_ADMIN].other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].MemberInviteCodes = {}
-data[SYSTEM_ADMIN].MemberInviteCodes[COMMUNITY_ADMIN] = {}
-data[SYSTEM_ADMIN].MemberInviteCodes[COMMUNITY_ADMIN] = {create:true, verify:true}
-data[SYSTEM_ADMIN].MemberInviteCodes[COMMUNITY_ADMIN].own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].MemberInviteCodes[COMMUNITY_ADMIN].other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].MemberInviteCode[GUARD] = {}
+data[SYSTEM_ADMIN].MemberInviteCode[GUARD] = {create:true, verify:true}
+data[SYSTEM_ADMIN].MemberInviteCode[GUARD].own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].MemberInviteCode[GUARD].other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].MemberInviteCodes[GUARD] = {}
-data[SYSTEM_ADMIN].MemberInviteCodes[GUARD] = {create:true, verify:true}
-data[SYSTEM_ADMIN].MemberInviteCodes[GUARD].own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].MemberInviteCodes[GUARD].other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].MemberInviteCode[RESIDENT] = {}
+data[SYSTEM_ADMIN].MemberInviteCode[RESIDENT] = {create:true, verify:true}
+data[SYSTEM_ADMIN].MemberInviteCode[RESIDENT].own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].MemberInviteCode[RESIDENT].other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].MemberInviteCodes[RESIDENT] = {}
-data[SYSTEM_ADMIN].MemberInviteCodes[RESIDENT] = {create:true, verify:true}
-data[SYSTEM_ADMIN].MemberInviteCodes[RESIDENT].own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].MemberInviteCodes[RESIDENT].other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].MemberInviteCode[RESIDENT_ADMIN] = {}
+data[SYSTEM_ADMIN].MemberInviteCode[RESIDENT_ADMIN] = {create:true, verify:true}
+data[SYSTEM_ADMIN].MemberInviteCode[RESIDENT_ADMIN].own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].MemberInviteCode[RESIDENT_ADMIN].other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].MemberInviteCodes[RESIDENT_ADMIN] = {}
-data[SYSTEM_ADMIN].MemberInviteCodes[RESIDENT_ADMIN] = {create:true, verify:true}
-data[SYSTEM_ADMIN].MemberInviteCodes[RESIDENT_ADMIN].own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].MemberInviteCodes[RESIDENT_ADMIN].other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Member = {}
+data[SYSTEM_ADMIN].Member[COMMUNITY_ADMIN] = {}
+data[SYSTEM_ADMIN].Member[COMMUNITY_ADMIN] = {create:true}
+data[SYSTEM_ADMIN].Member[COMMUNITY_ADMIN].own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Member[COMMUNITY_ADMIN].other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].Members = {}
-data[SYSTEM_ADMIN].Members[COMMUNITY_ADMIN] = {}
-data[SYSTEM_ADMIN].Members[COMMUNITY_ADMIN] = {create:true}
-data[SYSTEM_ADMIN].Members[COMMUNITY_ADMIN].own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].Members[COMMUNITY_ADMIN].other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Member[GUARD] = {}
+data[SYSTEM_ADMIN].Member[GUARD] = {create:true}
+data[SYSTEM_ADMIN].Member[GUARD].own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Member[GUARD].other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].Members[GUARD] = {}
-data[SYSTEM_ADMIN].Members[GUARD] = {create:true}
-data[SYSTEM_ADMIN].Members[GUARD].own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].Members[GUARD].other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Member[RESIDENT] = {}
+data[SYSTEM_ADMIN].Member[RESIDENT] = {create:true}
+data[SYSTEM_ADMIN].Member[RESIDENT].own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Member[RESIDENT].other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].Members[RESIDENT] = {}
-data[SYSTEM_ADMIN].Members[RESIDENT] = {create:true}
-data[SYSTEM_ADMIN].Members[RESIDENT].own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].Members[RESIDENT].other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Member[RESIDENT_ADMIN] = {}
+data[SYSTEM_ADMIN].Member[RESIDENT_ADMIN] = {create:true}
+data[SYSTEM_ADMIN].Member[RESIDENT_ADMIN].own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Member[RESIDENT_ADMIN].other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].Members[RESIDENT_ADMIN] = {}
-data[SYSTEM_ADMIN].Members[RESIDENT_ADMIN] = {create:true}
-data[SYSTEM_ADMIN].Members[RESIDENT_ADMIN].own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].Members[RESIDENT_ADMIN].other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].PackageReceiveCode = {}
+data[SYSTEM_ADMIN].PackageReceiveCode = {create:true, verify:true}
+data[SYSTEM_ADMIN].PackageReceiveCode.own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].PackageReceiveCode.other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].PackageReceiveCodes = {}
-data[SYSTEM_ADMIN].PackageReceiveCodes = {create:true, verify:true}
-data[SYSTEM_ADMIN].PackageReceiveCodes.own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].PackageReceiveCodes.other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Package = {}
+data[SYSTEM_ADMIN].Package = {create:true}
+data[SYSTEM_ADMIN].Package.own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].Package.other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].Packages = {}
-data[SYSTEM_ADMIN].Packages = {create:true}
-data[SYSTEM_ADMIN].Packages.own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].Packages.other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].SystemAdmin = {}
+data[SYSTEM_ADMIN].SystemAdmin = {create:true}
+data[SYSTEM_ADMIN].SystemAdmin.own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].SystemAdmin.other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].SystemAdmins = {}
-data[SYSTEM_ADMIN].SystemAdmins = {create:true}
-data[SYSTEM_ADMIN].SystemAdmins.own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].SystemAdmins.other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].User = {}
+data[SYSTEM_ADMIN].User = {create:true}
+data[SYSTEM_ADMIN].User.own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].User.other = {read:true, update:true, delete:true}
 
-data[SYSTEM_ADMIN].Users = {}
-data[SYSTEM_ADMIN].Users = {create:true}
-data[SYSTEM_ADMIN].Users.own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].Users.other = {read:true, update:true, delete:true}
-
-data[SYSTEM_ADMIN].HouseholdPermissions = {}
-data[SYSTEM_ADMIN].HouseholdPermissions = {create:true}
-data[SYSTEM_ADMIN].HouseholdPermissions.own = {read:true, update:true, delete:true}
-data[SYSTEM_ADMIN].HouseholdPermissions.other = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].HouseholdPermission = {}
+data[SYSTEM_ADMIN].HouseholdPermission = {create:true}
+data[SYSTEM_ADMIN].HouseholdPermission.own = {read:true, update:true, delete:true}
+data[SYSTEM_ADMIN].HouseholdPermission.other = {read:true, update:true, delete:true}
 
 // ==================== role:USER ====================
 
 data[USER] = {}
 
-data[USER].Communities = {}
-data[USER].Communities.own = {read:true}
+data[USER].Community = {}
+data[USER].Community.own = {read:true}
 
-data[USER].CommunityRequisitions = {create:true}
-data[USER].CommunityRequisitions.own = {read:true, update:true, delete:true}
+data[USER].CommunityRequisition = {create:true}
+data[USER].CommunityRequisition.own = {read:true, update:true, delete:true}
 
-data[USER].HouseholdRequisitions = {create:true}
-data[USER].HouseholdRequisitions.own = {read:true, delete:true}
+data[USER].HouseholdRequisition = {create:true}
+data[USER].HouseholdRequisition.own = {read:true, delete:true}
 
-data[USER].Invitations = {}
-data[USER].Invitations.own = {read:true, delete:true, accept:true}
+data[USER].Invitation = {}
+data[USER].Invitation.own = {read:true, delete:true, accept:true}
 
-data[USER].MemberInviteCodes = {}
-data[USER].MemberInviteCodes[COMMUNITY_ADMIN] = {verify:true}
-data[USER].MemberInviteCodes[GUARD] = {verify:true}
-data[USER].MemberInviteCodes[RESIDENT] = {verify:true}
-data[USER].MemberInviteCodes[RESIDENT_ADMIN] = {verify:true}
+data[USER].MemberInviteCode = {}
+data[USER].MemberInviteCode[COMMUNITY_ADMIN] = {verify:true}
+data[USER].MemberInviteCode[GUARD] = {verify:true}
+data[USER].MemberInviteCode[RESIDENT] = {verify:true}
+data[USER].MemberInviteCode[RESIDENT_ADMIN] = {verify:true}
 
-data[USER].Users = {}
-data[USER].Users = {create:true}
-data[USER].Users.own = {read:true, update:true, delete:true}
-data[USER].Users.other = {read:true}
+data[USER].User = {}
+data[USER].User = {create:true}
+data[USER].User.own = {read:true, update:true, delete:true}
+data[USER].User.other = {read:true}
 
 
 
